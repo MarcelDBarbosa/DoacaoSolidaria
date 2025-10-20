@@ -1,0 +1,21 @@
+<main class="display">
+    <aside>
+        <h2 class="greenText">Ajude agora</h2>
+        <h2>quem Precisa</h2>
+        <p>Somos uma instituição independente, sem fins lucrativos, com o único intuito de ajudar os mais necessitados.</p>
+        <p>Se você deseja ser um doador e contribuir junto com a gente, clique no botão cadastrar no canto superior direito da pagina.<br>Sua ajuda será de suma importârcia!</p>
+        <p>Caso você esteja buscando ajuda, digite o cep de sua localidade abaixo e encontre um doador mais próximo de você.</p>
+        <form class="formBusca" action="/buscar" method="get">
+            {{#if error}}
+                <p class="error">{{error}}</p>
+            {{/if}}
+            <input class="cepInputBusca" type="text" name="valor" placeholder="Cep: 00000-000" inputmode="numeric" maxlength="9">
+            <button class="buscarBtn" type="submit">Buscar</button>
+        </form>
+        <a class="verTodos" href="/all">Clique aqui para ver todo o banco de doadores</a>
+    </aside>
+
+    <article>
+        <img class="donationImg" src="/img/donations.png" alt="donations">
+    </article>
+</main>

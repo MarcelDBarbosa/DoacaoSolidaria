@@ -1,0 +1,25 @@
+<main>
+    {{#if error}}
+        <h2>{{error}}</h2>
+    {{else}}
+        {{#if registerObject}}
+        <div class="register_object_div">
+            <h2>Registro criado com <span class="greenText">Sucesso</span> !</h2>
+            <p>Seu registro está em análise e em breve estará disponível no sistema.</p>
+            <fieldset>
+                <p><span>Nome :</span>  {{registerObject.nome}}</p>
+                <p><span>Email :</span>  {{registerObject.email}}</p>
+                <p><span>Telefone :</span>  {{registerObject.phone}}</p>
+                <p><span>Instagram :</span>  {{registerObject.instagram}}</p>
+                <p><span>CEP :</span>  {{registerObject.cep}}</p>
+                <p><span>Logradouro :</span>  {{registerObject.logradouro}}</p>
+                <p><span>Número :</span>  {{registerObject.number}}</p>
+                <p><span>Complemento :</span>  {{registerObject.complement}}</p>
+                <p><span>Cidade :</span>  {{registerObject.city}}</p>
+                <p><span>Estado :</span>  {{registerObject.state}}</p>
+                <p><span>Descrição :</span>  {{registerObject.description}}</p>
+            </fieldset>
+        </div>
+        {{/if}}
+    {{/if}}
+</main>

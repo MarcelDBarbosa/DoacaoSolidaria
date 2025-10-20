@@ -1,0 +1,46 @@
+<main>
+    {{#if error}}
+        <p id="searchP">Conexão instável com o banco de dados no momento.<br>Tente novamente mais tarde.<p>
+    {{else}}
+        {{#if cleanUsers.length}}
+            <div class="table_list_div">
+                <table class="table_list" id="table_list">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Instagram</th>
+                            <th>CEP</th>
+                            <th>Logradouro</th>
+                            <th>Número</th>
+                            <th>Complemento</th>
+                            <th>Cidade</th>
+                            <th>Estado</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_list_tbody">
+                        {{#each cleanUsers}}
+                            <tr id="table_list_tr">
+                                <td data-label="Nome">{{ nome }}</td> <!-- Ajuste conforme necessário -->
+                                <td data-label="Email">{{ email }}</td>
+                                <td data-label="Telefone">{{ phone }}</td> <!-- Ajuste conforme necessário -->
+                                <td data-label="Instagram">{{ instagram }}</td>
+                                <td data-label="CEP">{{ cep }}</td>
+                                <td data-label="Logradouro">{{ logradouro }}</td>
+                                <td data-label="Número">{{ number }}</td>
+                                <td data-label="Complemento">{{ complement }}</td>
+                                <td data-label="Cidade">{{ city }}</td>
+                                <td data-label="Estado">{{ state }}</td>
+                                <td data-label="Descrição">{{ description }}</td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        {{else}}
+            <p id="region_na">Não há nenhuma ONG cadastrada na sua região.</p>
+        {{/if}}
+    {{/if}}
+</main>

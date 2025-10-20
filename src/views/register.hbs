@@ -1,0 +1,53 @@
+<main>
+    
+    <div class="div-form-register">
+        <h2>Formulario de <span class="greenText">Doação</span></h2>
+        <form class="form-register-user" id="form-register-user" method="post">
+
+            <fieldset>
+                <label for="input-name">Nome da Instituição : </label>
+                <input type="text" id="input-name" name="name" placeholder="Insira o nome aqui..." maxlength="50" required>
+                
+                <label for="input-email">Endereço de email :</label>
+                <input type="email" id="input-email" name="email" maxlength="50" required>
+
+                <label for="input-phone">Número de Telefone :</label>
+                <input type="tel" id="input-phone" name="phone" placeholder="11 99999-9999" inputmode="numeric" maxlength="11" pattern="^\d{10,11}$" title="O número está incorreto!" required>
+
+                <label for="input-instagram">Instagram (Opcional) :</label>
+                <input type="text" id="input-instagram" name="instagram" placeholder="@usuario" maxlength="30" pattern="^@\w+$" title="O usuario precisa começar com @">
+                
+                <label for="input-description">Descrição :</label>
+                <input type="text" id="input-description" name="description" placeholder="Descrição da Instituição" required>
+                
+                <label for="input-cep">CEP :</label>
+                <input type="text" id="input-cep" name="cep" placeholder="00000-000" inputmode="numeric" maxlength="8" pattern="^\d{8}$" title="O CEP precisa ter 8 dígitos" required>
+                
+                <div id="address-fields">
+
+                    <label for="input-user-street">Logradouro :</label>
+                    <input type="text" id="input-user-street" name="logradouro" maxlength="30" required>
+
+                    <label for="input-street-number">Número :</label>
+                    <input type="number" id="input-street-number" name="number" inputmode="numeric" maxlength="5" required>
+                
+                    <label for="input-complement">Complemento :</label>
+                    <input type="text" id="input-complement" name="complement" maxlength="30">
+
+                    <label for="input-city">Cidade :</label>
+                    <input type="text" id="input-city" name="city" maxlength="15" required>
+
+                    <label for="input-user-street">Estado :</label>
+                    <input type="text" id="input-state" name="state" placeholder="Ex: SP" maxlength="2" pattern="^[A-Z]{2}$" title="O Estado precisa estar no padrão UF" required>
+                </div>
+                {{!-- Uma ancora para, ao preencher o CEP, a pagina rolar automaticamente para baixo, mostrando os outros campos --}}
+                <a href="#" id="foo"></a> 
+                
+                <button class="btn-register-form" type="submit" id="btn-register-form">Cadastrar</button>
+            </fieldset>
+            
+        </form>
+    </div>
+    <script src="/js/app.js"></script>
+    
+</main>
